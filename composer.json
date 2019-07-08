@@ -1,7 +1,7 @@
 {
   "name": "who-dares-wins/dashboard",
   "description": "The SAS pilot dashboard.",
-  "type": "project",
+  "type": "seat-plugin",
   "license": "None",
   "authors": [
     {
@@ -14,5 +14,15 @@
       "SAS\\Dashboard\\": "src/"
     }
   },
-  "require": {}
+  "require": {
+    "eveseat/web": "^3.0"
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SAS\\Dashboard\\DashboardServiceProvider"
+      ]
+    }
+  }
 }
