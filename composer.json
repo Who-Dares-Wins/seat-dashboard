@@ -1,0 +1,18 @@
+{
+  "name": "who-dares-wins/dashboard",
+  "description": "The SAS pilot dashboard.",
+  "type": "project",
+  "license": "None",
+  "authors": [
+    {
+      "name": "Doug Estey",
+      "email": "doug.estey@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "SAS\\Dashboard\\": "src/"
+    }
+  },
+  "require": {}
+}
