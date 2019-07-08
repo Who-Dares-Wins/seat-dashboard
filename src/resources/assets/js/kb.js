@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  console.log('SAS Dashboard home loaded.');
+  console.log('SAS Dashboard KB loaded.');
 
   const api = new GhostContentAPI({
     url: 'https://wiki.whodareswins.space',
@@ -17,7 +17,7 @@ $(document).ready(() => {
       });
   
       new Vue({
-        el: '#app',
+        el: '#kb',
         data: {
           fetchedPosts
         }

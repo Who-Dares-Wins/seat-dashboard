@@ -18,4 +18,8 @@ class DashboardController extends Controller {
   public function getHome() {
     return view('dashboard::home.index');
   }
+
+  public function getKnowledgeBase() {
+    return view('dashboard::kb.index');
+  }
 }

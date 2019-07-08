@@ -6,15 +6,20 @@ return [
     'icon'          => 'fa-crosshairs',
     'route_segment' => 'dashboard',
     'route'         => 'dashboard.home',
-    'permission'    => 'dashboard.view'
-    // 'entries' => [
-    //   [
-    //     'name'  => 'Home',
-    //     'label' => 'dashbboard::seat.join',
-    //     'icon'  => 'fa-sign-in',
-    //     'route' => 'dashbboard.server.join',
-    //     'permission' => 'dashbboard.view',
-    //   ],
-    // ]
+    'permission'    => 'dashboard.view',
+    'entries' => [
+      [
+        'name'          => 'Home',
+        'icon'          => 'fa-crosshairs',
+        'route_segment' => 'dashboard',
+        'route'         => 'dashboard.home',
+      ],
+      [
+        'name'          => 'Knowledge Base',
+        'icon'          => 'fa-graduation-cap',
+        'route_segment' => 'dashboard',
+        'route'         => 'dashboard.kb',
+      ],
+    ]
   ],
 ];

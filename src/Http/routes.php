@@ -14,6 +14,11 @@ Route::group([
         'as' => 'dashboard.home',
         'uses' => 'DashboardController@getHome',
       ]);
+
+      Route::get('/kb', [
+        'as' => 'dashboard.kb',
+        'uses' => 'DashboardController@getKnowledgeBase',
+      ]);
     });
   });
 });
