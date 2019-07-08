@@ -1,7 +1,7 @@
 @extends('web::layouts.grids.4-4-4')
 
-@section('title', Dashboard'))
-@section('page_header', 'Dashboard''))
+@section('title', 'Dashboard')
+@section('page_header', 'Dashboard')
 
 @section('left')
 @stop

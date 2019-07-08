@@ -1,6 +1,6 @@
 <?php
 
-namespace SAS\Dashboard;
+namespace Seat\SAS\Dashboard;
 
 use Seat\Services\AbstractSeatPlugin;
 
@@ -14,7 +14,6 @@ class DashboardServiceProvider extends AbstractSeatPlugin {
     $this->addRoutes();
     $this->addViews();
     $this->addAssets();
-    $this->configureApi();
   }
 
   /**
@@ -46,9 +45,7 @@ class DashboardServiceProvider extends AbstractSeatPlugin {
    * Import routes
    */
   private function addRoutes() {
-    if (! $this->app->routesAreCached()) {
-      include __DIR__ . '/Http/routes.php';
-    }
+    $this->loadRoutesFrom(__DIR__ . '/Http/routes.php');
   }
 
   /**
@@ -97,7 +94,7 @@ class DashboardServiceProvider extends AbstractSeatPlugin {
    * @return string
    */
   public function getPackagistPackageName(): string {
-    return 'seat-dashboard';
+    return 'dashboard';
   }
 
   /**
@@ -117,6 +114,6 @@ class DashboardServiceProvider extends AbstractSeatPlugin {
    * @return string
    */
   public function getVersion(): string {
-    return config('seat-dashboard.config.version');
+    return config('dashboard.config.version');
   }
 }

@@ -1,6 +1,7 @@
 <?php
 
-namespace SAS\Dashboard\Http\Controllers;
+namespace Seat\SAS\Dashboard\Http\Controllers;
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use Illuminate\Http\Request;
@@ -10,14 +11,11 @@ use Seat\Web\Http\Controllers\Controller;
 
 /**
  * Class DashboardController
- * @package SAS\Dashboard\Http\Controllers
+ * @package Seat\SAS\Dashboard\Http\Controllers
  */
 
 class DashboardController extends Controller {
-  /**
-   * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-   */
   public function getHome() {
-    return view('dashboard::home');
+    return view('dashboard::home.index');
   }
 }

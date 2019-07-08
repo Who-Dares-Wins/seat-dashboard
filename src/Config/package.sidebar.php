@@ -3,7 +3,7 @@
 return [
   'dashboard' => [
     'name'          => 'Dashboard',
-    'icon'          => 'fa-tachometer-alt',
+    'icon'          => 'fa-tachometer',
     'route_segment' => 'dashboard',
     'route'         => 'dashboard.home',
     'permission'    => 'dashboard.view'

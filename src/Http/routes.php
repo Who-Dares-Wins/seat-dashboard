@@ -1,15 +1,19 @@
 <?php
 
 Route::group([
-  'namespace' => 'SAS\Dashboard\Http\Controllers',
+  'namespace' => 'Seat\SAS\Dashboard\Http\Controllers',
   'prefix' => 'dashboard'
 ], function() {
   Route::group([
     'middleware' => ['web', 'auth', 'locale'],
   ], function() {
-    Route::get('/home', [
-      'as' => 'dashboard.home',
-      'uses' => 'DashboardController@getHome',
-    ]);
+    Route::group([
+      'middleware' => 'bouncer:dashboard.view',
+    ], function () {
+      Route::get('/home', [
+        'as' => 'dashboard.home',
+        'uses' => 'DashboardController@getHome',
+      ]);
+    });
   });
 });
